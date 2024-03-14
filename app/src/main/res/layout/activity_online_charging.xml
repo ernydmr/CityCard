@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F1E9"
+    tools:context=".OnlineCharging">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#62929E"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Online Charging"
+                android:textColor="#CCFAF6F6"
+                android:textSize="28sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/editTextCityCardId"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="16dp"
+        android:ems="10"
+        android:hint="City Card Id"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBalanceCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <Button
+        android:id="@+id/btnBalanceCheck"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape"
+        android:text="Balance Check"
+        android:textColor="#CCFAF6F6"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="16dp"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCCNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCCNum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="16dp"
+        android:ems="10"
+        android:hint="Credit Card Number"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExpire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCVV"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="16dp"
+        android:ems="10"
+        android:hint="CVV"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTopUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextExpire"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="16dp"
+        android:ems="10"
+        android:hint="Expire Date"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCVV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnTopUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape"
+        android:text="TOP UP"
+        android:textAlignment="center"
+        android:textColor="#CCFAF6F6"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
